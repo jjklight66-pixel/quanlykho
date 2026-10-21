@@ -1,0 +1,6 @@
+.headerClock{display:grid;text-align:right;line-height:1.2;padding:0 4px;color:var(--text);min-width:78px}
+.headerClock strong{font-size:12px;font-variant-numeric:tabular-nums;letter-spacing:.3px}
+.headerClock small{font-size:8px;color:var(--muted);margin-top:3px}
+.languageBtn{height:30px;min-width:38px;border:1px solid var(--line);background:var(--panel);border-radius:8px;color:var(--text);font:700 10px 'DM Sans',sans-serif;cursor:pointer}
+.languageBtn:hover{border-color:var(--blue);color:#9fb5ff}
+@media(max-width:500px){.headerClock{min-width:59px;padding:0}.headerClock small{display:none}.topActions{gap:5px}}

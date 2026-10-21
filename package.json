@@ -1,0 +1,23 @@
+{
+  "name": "quanlykho-wms",
+  "private": true,
+  "version": "1.0.0",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "setup": "npm install && npm run db:up && npm run db:migrate && npm run db:seed",
+    "dev": "concurrently -n api,web -c cyan,magenta \"node scripts/dev-api.cjs\" \"npm run dev -w @wms/web\"",
+    "dev:all": "concurrently -n api,web,mobile -c cyan,magenta,green \"node scripts/dev-api.cjs\" \"npm run dev -w @wms/web\" \"npm run start -w @wms/mobile\"",
+    "start": "npm run setup && npm run dev:all",
+    "db:up": "docker compose up -d db",
+    "db:down": "docker compose down",
+    "db:migrate": "npm run migrate -w @wms/api",
+    "db:seed": "npm run seed -w @wms/api",
+    "mobile": "npm run start -w @wms/mobile"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}

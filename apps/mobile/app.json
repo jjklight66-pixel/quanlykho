@@ -1,0 +1,28 @@
+{
+  "expo": {
+    "name": "Northstar WMS",
+    "slug": "northstar-wms",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSCameraUsageDescription": "Scan warehouse barcodes and proof of delivery."
+      }
+    },
+    "android": {
+      "permissions": [
+        "CAMERA"
+      ],
+      "package": "com.northstar.wms"
+    },
+    "plugins": [
+      "expo-camera",
+      "expo-audio",
+      "expo-secure-store",
+      "expo-status-bar"
+    ]
+  }
+}

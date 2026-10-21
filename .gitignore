@@ -1,0 +1,8 @@
+node_modules/
+apps/*/node_modules/
+apps/web/dist/
+apps/mobile/dist/
+apps/mobile/.expo/
+.expo/
+.env
+npm-debug.log*
